@@ -26,75 +26,26 @@
     </button>
 </div>
 
+
 <div class="container marketing">
 
-  <!-- Three columns of text below the carousel -->
+<?php
+
+$var= find_all("imoveis");
+
+?>
+
+ 
   <div class="row">
     <div class="col-lg-4">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
       <h3>Imóvel Comercial</h3>
       <p> Rua Almirante Tamandaré, 386 - Bairro Alto da XV - Curitiba - PR
-Casa comercial</p>
+      Casa comercial</p>
       <p><a class="btn btn-secondary" href="#">Veja os detalhes &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-      <h3>Locação – Prédio Comercial – Centro</h3>
-      <p>
-Valor R$120.000
- Rua Marechal Deodoro, 1133 - Bairro Centro - Curitiba - PR
-Prédios</p>
-      <p><a class="btn btn-secondary" href="#">Veja os detalhes &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-      <h3>Locação – Sala Comercial – Vila Izabel </h3>
-      <p>
-       Valor R$4.500
-    Rua Prof. Ulisses Vieira, 30 - Bairro Vila Izabel - Curitiba - PR
-      Lojas</p>
-      <p><a class="btn btn-secondary" href="#">Veja os detalhes &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-  </div><!-- /.row -->
-  <div class="row">
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-      <h3>Venda – Terreno – 
-          Bigorrilho</h3>
-      <p> 
-       Valor R$6.000.000
-       Rua Martim Afonso, 2260 - Bairro Bigorrilho - Curitiba - PR
-    Terrenos</p>
-      <p><a class="btn btn-secondary" href="#">Veja os detalhes &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-      <h3>Venda – Terreno – Hugo Lange</h3>
-      <p>
-      
-Valor R$2.850.000
- Avenida Nossa Senhora da Luz, 1470 - Bairro Hugo Lange - Curitiba - PR
-Terrenos</p>
-      <p><a class="btn btn-secondary" href="#">Veja os detalhes &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-      <h2>Venda – Salas Comerciais – Água Verde </h2>
-      <p>
-      
-Valor R$240.100
- Avenida República Argentina 1505 - Bairro Água Verde - Curitiba - PR
-Sala/conjunto comercial</p>
-      <p><a class="btn btn-secondary" href="#">Veja os detalhes &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-  </div>
-
+    </div>
+   
   <!-- START THE FEATURETTES -->
 
   <hr class="featurette-divider">
