@@ -56,7 +56,7 @@
   </svg>
 <header>
     <div class="px-3 py-2 bg-dark text-white">
-      <div class="container-fluid">
+      <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
             <img src="img/logo_branca.png" style="height: 50px; width: auto;">
@@ -96,7 +96,7 @@
               </a>
             </li>
             <li>
-              <a href="login.php" class="nav-link text-white">
+              <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-signin" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#login"/></svg>
                 Login
               </a>

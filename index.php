@@ -28,6 +28,13 @@
 
 <div class="container marketing">
     <div class="row">
+      <div class="col-md-12">
+        <div class="heading-title">
+          <h2>Últimos imóveis</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="property-container">
                 <div class="property-image">
