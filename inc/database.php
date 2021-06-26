@@ -135,7 +135,7 @@ function buscarImoveis($id = null ) {
 		$values = rtrim($values, ',');
 		
 		$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-
+		
 		try {
 		  $database->query($sql);
 		
@@ -151,10 +151,54 @@ function buscarImoveis($id = null ) {
 		close_database($database);
 	  }
 	
+function salvarUsuario() {
+
+
+	if (!empty($_POST['infousuario'])) {
+		$info = $_POST['infousuario'];
+		save('infousuario', $info);
+		echo "<script> window.location.replace('index.php'); </script>";
+		exit();
+	}
+
+	
+}
+
+function salvarLogin() {
+
+
+	if (!empty($_POST['login'])) {
+		
+		$log = $_POST['login'];
+	     save('login', $log);
+		echo "<script> window.location.replace('index.php'); </script>";
+		exit();
+	}
+
+	
+}
+
+function ($email, $senha ) {
+  
+	$database = open_database();
+	$found = null;
+
+	$sql= "SELECT email, senha ";
+	$sql .= "FROM infousuarios ";
+
+	
+	if ($email && $senha) {
+		$sql .= "WHERE login = '" . $email . "' AND senha = '" . $senha . "'";
+		$result = $database->query($sql);
+	
+		if ($result->num_rows > 0) {
+			$found = $result->fetch_row();
+		}
+	}
+var_dump($found);
+
+	close_database($database);
+	return $found;
+}
 
 ?>
-	  
-
-
-
-	 

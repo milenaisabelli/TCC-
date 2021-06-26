@@ -92,59 +92,18 @@
                 </form>
                 </div>
                 <div class="modal-footer">
-                    <p>Ainda não é cadastrado? <a href="">Cadastre-se Aqui.</a></p>
+                    
                     <div class="d-grid gap-2" style="width:100%">
                         <a href="" class="btn btn-success btn-lg" type="button">Logar</a>
                     </div>
+                    <p>Ainda não é cadastrado? <a href="">Cadastre-se Aqui.</a></p>
                 </div>
             </div>
             </div>
         </div>
 
 
-        <div class="modal fade" id="modal-signin1" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Cadastro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <form role="form">
-                <div class="form-group">
-                    <label for="emailAddress">Nome</label>
-                    <input type="email" class="form-control input-lg" placeholder="Informe o e-mail">
-                    </div>
-                    <div class="form-group">
-                    <label for="emailAddress">Email</label>
-                    
-                    <input type="password" class="form-control input-lg" id="nome" placeholder="Email" value="" name="login['Email']" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="password">Senha</label>
-                    <input type="password" class="form-control input-lg" id="senha" placeholder="Senha" value="" name="senha" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="password">Confirme a senha</label>
-                    <input type="password" class="form-control input-lg" id="senha" placeholder="Confirme sua senha" value="" name="senha" required>
-                   
-                    </div>
-                    <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="forget"> Concordo com os termos de uso 
-                    </label>
-                    </div>
-                </form>
-                </div>
-                <div class="modal-footer">
-                    <p>Você já é cadastrado? <a href="">Faça Login Aqui.</a></p>
-                    <div class="d-grid gap-2" style="width:100%">
-                        <a href="" class="btn btn-success btn-lg" type="button">Cadastrar-se</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
+       
         <div class="modal fade" id="modal-perfil" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
             <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -174,14 +133,76 @@
 						<li><a href="fav.php" rel="nofollow">Meus favoritos</a></li>
                         <li><a href="cadastro.php" rel="nofollow">Registro de Usuario</a></li>
 						
-						<li><a href="politica.php" rel="nofollow">Politica de Privacidade</a></li>
-					
+						
 					
 					</ul>
                    
 				</div>
                     </div>
-                  
+
+                    <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                    <label for="emailAddress">E-mail</label>
+                    <input type="email" class="form-control input-lg" placeholder="Informe o e-mail">
+                    </div>
+                    <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control input-lg" placeholder="Senha">
+                    </div>
+                    <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="forget"> Mantenha-me logado
+                    </label>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Ainda não é cadastrado? <a href="">Cadastre-se Aqui.</a></p>
+                    <div class="d-grid gap-2" style="width:100%">
+                        <a href="" class="btn btn-success btn-lg" type="button">Logar</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                    <label for="emailAddress">Seu email</label>
+                    <input type="email" class="form-control input-lg" placeholder="Informe o e-mail">
+                    </div>
+                    <div class="form-group">
+                    <label for="name">Seu Nome</label>
+                    <input type="name" class="form-control input-lg" placeholder="Insira seu nome">
+                    </div>
+                    <div class="col-12">
+              <label for="descrição" class="form-label">Descrição: <span class="text-muted"></span></label>
+           
+            
+            </div>
+                    </div>
+                </form>
+                </div>
+            
+            </div>
+        </div>
+
                     
                     
                 </form>

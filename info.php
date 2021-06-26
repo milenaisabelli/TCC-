@@ -37,6 +37,8 @@
               <div class="p-3 text-center">
                 <h1 class="text-gradient text-primary"><span id="state1" countto="70">70</span>+</h1>
                 <h5 class="mt-3">Casas Vendidas!</h5>
+                <br>
+                <br>
                 <p class="text-sm">Mais de 70 casas vendidas pelo nosso sistema!</p>
               </div>
               <hr class="vertical dark">
@@ -53,9 +55,12 @@
               <div class="p-3 text-center">
                 <h1 class="text-gradient text-primary" id="state3" countto="30">30</h1>
                 <h5 class="mt-3"> Funcionarios atuando 24hrs por dia!</h5>
-                <p class="text-sm">Temos funcionarios analisando e aceitando casas para venda e aluguel 24hrs!</p>
+                <br> 
+                <p class="text-sm">Temos funcionarios analisando e aceitando casas para venda e aluguel 24hrs!</p> 
               </div>
+              <hr class="vertical dark">
             </div>
+           
           </div>
         </div>
 <section class="py-7">

@@ -1,11 +1,11 @@
 <?php include 'inc/header.php'; ?>
-
+<?php salvarUsuario(); ?>
 
 <body class="bg-light" style="">
 
     <div class="container">
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+       
         <h2>Cadastro de Informações do Usuario</h2>
        
       </div>
@@ -59,18 +59,18 @@
         </div>
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Insira suas informações</h4>
-          <form class="needs-validation was-validated" novalidate="">
+          <form method="post" novalidate="">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="primeiroNome">Nome</label>
-                <input type="text" class="form-control" id="primeiroNome" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="infousuario['nome']" >
                 <div class="invalid-feedback">
                   É obrigatório inserir um nome válido.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="sobrenome">Sobrenome</label>
-                <input type="text" class="form-control" id="sobrenome" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="infousuario['sobrenome']" required>
                 <div class="invalid-feedback">
                   É obrigatório inserir um sobre nome válido.
                 </div>
@@ -78,40 +78,35 @@
             </div>
 
             <div class="mb-3">
-              <label for="nickname">Nickname</label>
+              <label for="nickname">Email</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">@</span>
                 </div>
-                <input type="text" class="form-control" id="nickname" placeholder="Nickname" required="">
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="infousuario['email']" required>
                 <div class="invalid-feedback" style="width: 100%;">
-                  Seu nickname é obrigatório.
+                  Email é obrigatório.
                 </div>
               </div>
             </div>
 
-            <div class="mb-3">
-              <label for="email">Email <span class="text-muted">(Opcional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="pessoa@exemplo.com">
-              <div class="invalid-feedback">
-                Por favor, insira um endereço de e-mail válido, para atualizações de entrega.
-              </div>
-            </div>
 
-            <div class="mb-3">
-              <label for="endereco">Endereço</label>
-              <input type="text" class="form-control" id="endereco" placeholder="Rua ..., nº 0" required="">
-              <div class="invalid-feedback">
-                Por favor, insira seu endereço de entrega.
+            <div class="col-md-12">
+                <label for="sobrenome">Endereço</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="infousuario['endereco']" required>
+                <div class="invalid-feedback">
+                  É obrigatório inserir um sobre nome válido.
+                </div>
               </div>
-            </div>
+            
+         
 
            
              
-            
-            <div class="col-md-3">
+            <div class= "row">
+            <div class="col-md-4">
               <label for="country" class="form-label">Estado</label>
-              <select class="form-select" id="country" placeholder="" value="" name="" required>
+              <select class="form-control" id="firstName" placeholder="" value="" name="infousuario['estado']" required>
               <option value="">Escolha...</option>
              
                   <option value="AC">Acre (AC)</option>
@@ -147,9 +142,9 @@
               </div>
             </div>
            
-            <div class="col-md-3">
+            <div class="col-md-4">
               <label for="country" class="form-label">País</label>
-              <select class="form-select" id="country" placeholder="" value="" name=""required>
+              <select class="form-control" id="firstName" placeholder="" value="" name="infousuario['pais']" required>
                 <option value="">Escolha...</option>
                 <option value="Brasil">Brasil</option>
                 
@@ -157,21 +152,38 @@
               <div class="invalid-feedback">
                 
               </div>
-            
+            </div>
            
-              <div class="col-md-3 mb-3">
+              <div class="col-md-4">
                 <label for="cep">CEP</label>
-                <input type="text" class="form-control" id="cep" placeholder="" required="">
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="infousuario['cep']" required>
                 <div class="invalid-feedback">
-                  É obrigatório inserir um CEP.
+                 
                 </div>
               </div>
             </div>
-            
-
-        
+    
+            <div class= "row">
+              <div class="col-md-6">
+                  <label for="cidade">Cidade</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" name="infousuario['Cidade']" required>
+                  <div class="invalid-feedback"></div>
+              </div>
+              <div class="col-md-6">
+                <label for="cidade">Bairro</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="infousuario['bairro']" required>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+              
+          
+</div>
+  
+</div>      
             <input type="submit" class="btn btn-primary mb-3" value="Salvar" />
            
 
-   
+
+   </div>
+   </div>
 <?php include 'inc/footer.php'; ?>

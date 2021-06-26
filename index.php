@@ -261,5 +261,7 @@
 
      /END THE FEATURETTES --> 
 
-</div><!-- /.container -->
+</div>
+</div> 
+</div> <!-- /.container -->
 <?php include 'inc/footer.php'; ?>
