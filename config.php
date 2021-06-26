@@ -1,4 +1,5 @@
 <?php
+setlocale(LC_ALL,"pt_BR");
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ERROR);
@@ -21,7 +22,7 @@ if ( !defined('ABSPATH') )
 	
 /* caminho no server para o sistema */
 if ( !defined('BASEURL') )
-	define('BASEURL', '/crud-bootstrap-php/');
+	define('BASEURL', '/tcc/');
 	
 /* caminho do arquivo de banco de dados */
 if ( !defined('DBAPI') )

@@ -92,15 +92,109 @@
                 </form>
                 </div>
                 <div class="modal-footer">
-                    <p>Ainda não é cadastrado? <a href="cadastro.php">Cadastre-se Aqui.</a></p>
+                    <p>Ainda não é cadastrado? <a href="">Cadastre-se Aqui.</a></p>
                     <div class="d-grid gap-2" style="width:100%">
-                        <a href="cadastro.php" class="btn btn-success btn-lg" type="button">Cadastrar-se</a>
+                        <a href="" class="btn btn-success btn-lg" type="button">Logar</a>
                     </div>
                 </div>
             </div>
             </div>
         </div>
 
+
+        <div class="modal fade" id="modal-signin1" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form role="form">
+                <div class="form-group">
+                    <label for="emailAddress">Nome</label>
+                    <input type="email" class="form-control input-lg" placeholder="Informe o e-mail">
+                    </div>
+                    <div class="form-group">
+                    <label for="emailAddress">Email</label>
+                    
+                    <input type="password" class="form-control input-lg" id="nome" placeholder="Email" value="" name="login['Email']" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control input-lg" id="senha" placeholder="Senha" value="" name="senha" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="password">Confirme a senha</label>
+                    <input type="password" class="form-control input-lg" id="senha" placeholder="Confirme sua senha" value="" name="senha" required>
+                   
+                    </div>
+                    <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="forget"> Concordo com os termos de uso 
+                    </label>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Você já é cadastrado? <a href="">Faça Login Aqui.</a></p>
+                    <div class="d-grid gap-2" style="width:100%">
+                        <a href="" class="btn btn-success btn-lg" type="button">Cadastrar-se</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-perfil" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form role="form">
+                <div class="form-group">
+                
+                <h4> Bem-Vindo Novamente! </h4>
+                    
+                    <div class="user-account-main" data-role="user-account-main">
+					
+
+					<div class="flyout-user-signIn" data-role="user-signIn">
+						<p class="flyout-welcome-text" data-role="flyout-welcome"></p>
+
+						<p></p>
+
+						
+					
+					<div class="" id="flyout-remind-list"></div>
+					<ul class="" data-role="quick-entry">
+					
+						<li><a href="fav.php" rel="nofollow">Meus favoritos</a></li>
+                        <li><a href="cadastro.php" rel="nofollow">Registro de Usuario</a></li>
+						
+						<li><a href="politica.php" rel="nofollow">Politica de Privacidade</a></li>
+					
+					
+					</ul>
+                   
+				</div>
+                    </div>
+                  
+                    
+                    
+                </form>
+                </div>
+                <div class="modal-footer">
+                   
+                    <div class="d-grid gap-2" style="width:100%">
+                        <a href="" class="btn btn-success btn-lg" type="button">Sair</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

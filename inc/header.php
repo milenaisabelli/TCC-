@@ -2,7 +2,7 @@
 <?php require_once DBAPI; ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt_BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,13 +58,13 @@
     <div class="px-3 py-2 bg-dark text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <a href="index.php" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
             <img src="img/logo_branca.png" style="height: 50px; width: auto;">
           </a>
 
           <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
             <li>
-              <a href="" class="nav-link text-secondary">
+              <a href="index.php" class="nav-link text-secondary">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
                 Home
               </a>
@@ -76,12 +76,7 @@
                 Anuncie
               </a>
             </li>
-            <li>
-              <a href="carrinho.php" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#cart"/></svg>
-                Carrinho
-              </a>
-            </li>
+           
            
             <li>
               <a href="info.php" class="nav-link text-white">
@@ -90,7 +85,7 @@
               </a>
             </li>
             <li>
-              <a href="perfil.php" class="nav-link text-white">
+            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-perfil" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                 Perfil
               </a>
@@ -102,7 +97,7 @@
               </a>
             </li>
             <li>
-              <a href="cadastro.php" class="nav-link text-white">
+            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-signin1" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#cadastro"/></svg>
                 Cadastro
               </a>
