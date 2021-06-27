@@ -1,7 +1,5 @@
 <?php
 
-
-
 mysqli_report(MYSQLI_REPORT_STRICT);
 
 function open_database() {
@@ -111,8 +109,21 @@ function buscarImoveis($id = null ) {
 	function salvarimovel(){
 		if (!empty($_POST['imovel'])) {
 			$imovel = $_POST['imovel'];
+
+			$uploaddir = ABSPATH . 'uploads/';
+			$uploadfile = $uploaddir . basename($_FILES['fotoimovel']['name']);
+
+			if (move_uploaded_file($_FILES['fotoimovel']['tmp_name'], $uploadfile)) {
+				$imovel->foto = basename($_FILES['fotoimovel']['name']);
+				echo "Deu Certo!";
+			}
+			else {
+				echo "Deu Erro!";
+			}
+			
+			var_dump($imovel); exit();
 			save('imoveis', $imovel);
-			echo "<script> window.location.replace('index.php'); </script>";
+			echo "<script> window.location.replace('anuncios.php'); </script>";
 			exit();
 		}
 	}
@@ -178,27 +189,30 @@ function salvarLogin() {
 	
 }
 
-function ($email, $senha ) {
+function EfetuarLogin($email, $senha ) {
   
 	$database = open_database();
-	$found = null;
+	$row = null;
+	$user = null;
 
-	$sql= "SELECT email, senha ";
-	$sql .= "FROM infousuarios ";
+	$sql= "SELECT id, nome, sobrenome, email, senha ";
+	$sql .= "FROM infousuario ";
 
-	
 	if ($email && $senha) {
-		$sql .= "WHERE login = '" . $email . "' AND senha = '" . $senha . "'";
+		$sql .= "WHERE email = '" . $email . "' AND senha = '" . $senha . "'";
+
 		$result = $database->query($sql);
-	
 		if ($result->num_rows > 0) {
-			$found = $result->fetch_row();
+			$row = $result->fetch_row();
+			$user = new stdClass();
+			$user->id = $row[0];
+			$user->nome = $row[1];
+			$user->sobrenome = $row[2];
 		}
 	}
-var_dump($found);
 
 	close_database($database);
-	return $found;
+	return $user;
 }
 
 ?>

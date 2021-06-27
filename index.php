@@ -14,7 +14,7 @@
             <img src="img/banner2.jpg" width="100%" height="100%" />
         </div>
         <div class="carousel-item">
-            <img src="img/10.jpg" width="100%" height="100%" />
+            <img src="img/banner3.jpg" width="100%" height="100%" />
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">

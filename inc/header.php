@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body class="bg-light">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -64,7 +65,7 @@
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
-                            <a href="index.php" class="nav-link text-secondary">
+                            <a href="index.php" class="nav-link text-white">
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home" /></svg>
                                 Home
                             </a>
@@ -84,24 +85,22 @@
                                 Quem somos
                             </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-perfil" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle" /></svg>
-                                Perfil
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-signin" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#login" /></svg>
-                                Login
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-signin1" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#cadastro" /></svg>
-                                Cadastro
-                            </a>
-                        </li>
+
+                        <?php if($_SESSION["UsuarioLogadoId"]): ?>
+                            <li>
+                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-perfil" class="nav-link text-white">
+                                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle" /></svg>
+                                    Perfil
+                                </a>
+                            </li>
+                        <?php else: ?>
+                            <li>
+                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-signin" class="nav-link text-white">
+                                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#login" /></svg>
+                                    Login
+                                </a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
