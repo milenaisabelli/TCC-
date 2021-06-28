@@ -2,7 +2,7 @@
 setlocale(LC_ALL,"pt_BR");
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ERROR);
+error_reporting(E_ALL);
 
 /* O nome do banco de dados*/
 define('DB_NAME', 'tcc');
@@ -18,7 +18,7 @@ define('DB_HOST', 'localhost');
 
 /* caminho absoluto para a pasta do sistema */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(_FILE_) . '/');
+	define('ABSPATH', dirname(__FILE__) . '/');
 	
 /* caminho no server para o sistema */
 if ( !defined('BASEURL') )

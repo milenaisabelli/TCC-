@@ -106,61 +106,57 @@ function buscarImoveis($id = null ) {
 	return $found;
 }
 
-	function salvarimovel(){
-		if (!empty($_POST['imovel'])) {
-			$imovel = $_POST['imovel'];
+function salvarimovel(){
+	if (!empty($_POST['imovel'])) {
+		$imovel = $_POST['imovel'];
 
-			$uploaddir = ABSPATH . 'uploads/';
-			$uploadfile = $uploaddir . basename($_FILES['fotoimovel']['name']);
+		$uploaddir = ABSPATH . 'uploads\\';
+		$uploadfile = $uploaddir . basename($_FILES['fotoimovel']['name']);
 
-			if (move_uploaded_file($_FILES['fotoimovel']['tmp_name'], $uploadfile)) {
-				$imovel->foto = basename($_FILES['fotoimovel']['name']);
-				echo "Deu Certo!";
-			}
-			else {
-				echo "Deu Erro!";
-			}
-			
-			var_dump($imovel); exit();
-			save('imoveis', $imovel);
-			echo "<script> window.location.replace('anuncios.php'); </script>";
-			exit();
+		if (move_uploaded_file($_FILES['fotoimovel']['tmp_name'], $uploadfile)) {
+			$imovel['foto'] = basename($_FILES['fotoimovel']['name']);
 		}
+
+		save('imoveis', $imovel);
+		echo "<script> window.location.replace('anuncios.php'); </script>";
+		exit();
 	}
-	function save($table = null, $data = null) {
+}
 
-		$database = open_database();
-	  
-		$columns = null;
-		$values = null;
-	  
-		//print_r($data);
-	  
-		foreach ($data as $key => $value) {
-		  $columns .= trim($key, "'") . ",";
-		  $values .= "'$value',";
-		}
-	  
-		// remove a ultima virgula
-		$columns = rtrim($columns, ',');
-		$values = rtrim($values, ',');
-		
-		$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-		
-		try {
-		  $database->query($sql);
-		
-		  $_SESSION['message'] = 'Registro cadastrado com sucesso.';
-		  $_SESSION['type'] = 'success';
-		
-		} catch (Exception $e) { 
-			printf("Errormessage: %s\n", $mysqli->error);
-		  	$_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
-		  	$_SESSION['type'] = 'danger';
-		} 
-	  
-		close_database($database);
-	  }
+function save($table = null, $data = null) {
+
+	$database = open_database();
+	
+	$columns = null;
+	$values = null;
+	
+	//print_r($data);
+	
+	foreach ($data as $key => $value) {
+		$columns .= trim($key, "'") . ",";
+		$values .= "'$value',";
+	}
+	
+	// remove a ultima virgula
+	$columns = rtrim($columns, ',');
+	$values = rtrim($values, ',');
+	
+	$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
+
+	try {
+		$database->query($sql);
+	
+		$_SESSION['message'] = 'Registro cadastrado com sucesso.';
+		$_SESSION['type'] = 'success';
+	
+	} catch (Exception $e) { 
+		printf("Errormessage: %s\n", $mysqli->error);
+		$_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+		$_SESSION['type'] = 'danger';
+	} 
+	
+	close_database($database);
+}
 	
 function salvarUsuario() {
 
