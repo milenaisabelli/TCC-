@@ -86,7 +86,7 @@ function buscarImoveis($id = null, $limit = null, $infousuarioid = 0 ) {
 		$sql .= "left join imovelusuario iu on iu.imovelId  = i.id and iu.InfousuarioId = " . $usuariologado;
 		
 		if ($id) {
-	    	$sql .= " WHERE id = " . $id;
+	    	$sql .= " WHERE i.id = " . $id;
 	    	// $result = $database->query($sql);
 	    
 			// if ($result->num_rows > 0) {
@@ -95,7 +95,7 @@ function buscarImoveis($id = null, $limit = null, $infousuarioid = 0 ) {
 	  	}
 		
 		if ($infousuarioid > 0) {
-	    	$sql .= " WHERE InfousuarioId = " . $infousuarioid;
+	    	$sql .= " WHERE i.InfousuarioId = " . $infousuarioid;
 	    	// $result = $database->query($sql);
 	    
 			// if ($result->num_rows > 0) {
@@ -107,7 +107,38 @@ function buscarImoveis($id = null, $limit = null, $infousuarioid = 0 ) {
 		{
 			$sql .= " ORDER BY RAND() LIMIT " . $limit;
 		}
-		
+
+		$result = $database->query($sql);
+	
+		if ($result->num_rows > 0) {
+			$found = $result->fetch_all(MYSQLI_ASSOC);
+		}
+	} catch (Exception $e) {
+		$_SESSION['message'] = $e->GetMessage();
+		$_SESSION['type'] = 'danger';
+  	}
+	
+	close_database($database);
+	return $found;
+}
+
+function buscarImoveisFavoritos() {
+  
+	$database = open_database();
+	$found = null;
+
+	try {
+		$usuariologado = ($_SESSION["UsuarioLogadoId"]) ? $_SESSION["UsuarioLogadoId"] : 0;
+
+		$sql = "SELECT i.id, i.nome, endereco, preco, descricao, numero, complemento, bairro, estado, cidade, vagasid, banheirosid, tipoid, quartoid, foto, tamanho, ";
+		$sql .= "t.Nome as tipo, b.nome as banheiros, q.nome as quartos, v.nome as vagas ";
+		$sql .= "from imovelusuario iu ";
+		$sql .= "inner join imoveis i on i.id = iu.imovelId ";
+		$sql .= "left join tipo t on i.tipoid = t.id ";
+		$sql .= "left join banheiros b on i.banheirosid = b.id ";
+		$sql .= "left join quartos q on i.quartoid = q.id ";
+		$sql .= "left join vagas v on i.vagasid = v.id ";
+    	$sql .= " WHERE iu.InfousuarioId = " . $usuariologado;
 		$result = $database->query($sql);
 	
 		if ($result->num_rows > 0) {

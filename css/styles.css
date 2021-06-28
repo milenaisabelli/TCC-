@@ -671,3 +671,14 @@ svg.text-primary .color-background {
 svg.text-info .color-foreground {
     fill: #3E454D;
 }
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #3E454D;
+    border-color: #3E454D;
+}
+
+.page-link {
+    color: #3E454D;
+}
