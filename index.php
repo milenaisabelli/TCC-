@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="row">
-        <?php $imoveis = buscarImoveis(); ?>
+        <?php $imoveis = buscarImoveis(null, 4); ?>
         <?php if ($imoveis) : ?>
         <?php foreach ($imoveis as $imovel) : ?>
         <div class="col-md-3 col-sm-6 col-xs-12">
@@ -71,8 +71,8 @@
                     </h3>
                 </div>
                 <div class="property-footer">
-                    <a href="#" title="Add to favorite"><i class="fa fa-heart"></i></a>
-                    <a href="#" title="Contact Agent"><i class="fa fa-envelope"></i></a>
+                    <a href="javascript:void(0);" id="btnSalvarFavorito" class="<?php echo $imovel['favorito'] == 1 ? "favorito" : "" ?>" title="Add to favorite" data-imovel="<?php echo $imovel['id']; ?>"><i class="fa fa-heart"></i></a>
+                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-mail" title="Enviar mensagem"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
             </div>
         </div>
         <div class="row">
-            <?php $imoveis = buscarImoveis(); ?>
+            <?php $imoveis = buscarImoveis(null, 4); ?>
             <?php if ($imoveis) : ?>
             <?php foreach ($imoveis as $imovel) : ?>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -124,8 +124,8 @@
                         </h3>
                     </div>
                     <div class="property-footer">
-                    <a href="#" title="Add to favorite"><i class="fa fa-heart"></i></a>
-                    <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#modal-test" title="Contact Agent"><i class="fa fa-envelope"></i></a>
+                    <a href="javascript:void(0);" id="btnSalvarFavorito" class="<?php echo $imovel['favorito'] == 1 ? "favorito" : "" ?>" title="Add to favorite" data-imovel="<?php echo $imovel['id']; ?>"><i class="fa fa-heart"></i></a>
+                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-mail" title="Enviar mensagem"><i class="fa fa-envelope"></i></a>
 
 
                       <!--  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-text" title="Contact Agent"><i class="fa fa-envelope" title="Add to favorite"><i class="fa fa-heart"></i></a>-->

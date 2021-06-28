@@ -66,157 +66,125 @@
 
         </div>
     </footer>
-
-    <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
+    <div class="modal fade" id="modal-mail" tabindex="-1" role="dialog" aria-labelledby="modal-mail" aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="emailAddress">E-mail</label>
-                            <input type="email" class="form-control input-lg" placeholder="Informe o e-mail" id="txtEmail">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Senha</label>
-                            <input type="password" class="form-control input-lg" placeholder="Senha" id="txtSenha">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="forget"> Mantenha-me logado
-                            </label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <p>Ainda não é cadastrado? <a href="cadastro.php">Cadastre-se Aqui.</a></p>
-                    <div class="d-grid gap-2" style="width:100%">
-                        <button id="btnLogin" class="btn btn-success btn-lg" type="button">Logar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modal-perfil" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Perfil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-
-                        <h4> Bem-Vindo <?php echo $_SESSION["UsuarioLogadoNome"] ?>! </h4>
-
-                        <div class="user-account-main" data-role="user-account-main">
-
-
-                            <div class="flyout-user-signIn" data-role="user-signIn">
-                                <p class="flyout-welcome-text" data-role="flyout-welcome"></p>
-
-                                <p></p>
-
-
-
-                                <div class="" id="flyout-remind-list"></div>
-                                <ul class="" data-role="quick-entry">
-
-                                    <li><a href="fav.php" rel="nofollow">Meus favoritos</a></li>
-                                    <li><a href="anuncios.php" rel="nofollow">Meus anuncios</a></li>
-                                    <li><a href="cadastro.php" rel="nofollow">Alterar meu cadastro</a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-grid gap-2" style="width:100%">
-                        <a href="logout.php" class="btn btn-success btn-lg" type="button">Sair</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-text" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Perfil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-
-                        <h4> Bem-Vindo <?php echo $_SESSION["UsuarioLogadoNome"] ?>! </h4>
-
-                        <div class="user-account-main" data-role="user-account-main">
-
-
-                            <div class="flyout-user-signIn" data-role="user-signIn">
-                                <p class="flyout-welcome-text" data-role="flyout-welcome"></p>
-
-                                <p></p>
-
-
-
-                                <div class="" id="flyout-remind-list"></div>
-                                <ul class="" data-role="quick-entry">
-
-                                    <li><a href="fav.php" rel="nofollow">Meus favoritos</a></li>
-                                    <li><a href="anuncios.php" rel="nofollow">Meus anuncios</a></li>
-                                    <li><a href="cadastro.php" rel="nofollow">Alterar meu cadastro</a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-grid gap-2" style="width:100%">
-                        <a href="logout.php" class="btn btn-success btn-lg" type="button">Sair</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="modal fade" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Enviar Mensagem</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form role="form">
                         <div class="form-group">
                             <label for="emailAddress">Nome</label>
+                            <input type="email" class="form-control input-lg" placeholder="Informe o seu nome" id="txtEmail">
+                        </div>    
+                        <div class="form-group">
+                            <label for="emailAddress">E-Mail</label>
+                            <input type="email" class="form-control input-lg" placeholder="Informe o e-mail" id="txtEmailContato">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">Celular</label>
                             <input type="email" class="form-control input-lg" placeholder="Informe o e-mail" id="txtEmail">
                         </div>
                         <div class="form-group">
-                            <label for="password">Senha</label>
-                            <input type="password" class="form-control input-lg" placeholder="Senha" id="txtSenha">
+                            <label for="emailAddress">Mensagem</label>
+                            <textarea rows="4" class="form-control input-lg" id="txtEmail"></textarea>
                         </div>
-                        
                     </form>
-                    <textarea rows="6" class="form-control" id="experiencia" name="imovel['descricao']"></textarea>
                 </div>
-               
+                <div class="modal-footer">
                     <div class="d-grid gap-2" style="width:100%">
-                        <button id="btnLogin" class="btn btn-success btn-lg" type="button">Enviar</a>
+                        <button type="button" class="btn btn-success btn-lg" data-bs-dismiss="modal" aria-label="Close">Enviar Mensagem</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <?php if($_SESSION["UsuarioLogadoId"]): ?>
+        <div class="modal fade" id="modal-perfil" tabindex="-1" role="dialog" aria-labelledby="modal-perfil" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Perfil</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+
+                            <h4> Bem-Vindo <?php echo $_SESSION["UsuarioLogadoNome"] ?>! </h4>
+
+                            <div class="user-account-main" data-role="user-account-main">
+
+
+                                <div class="flyout-user-signIn" data-role="user-signIn">
+                                    <p class="flyout-welcome-text" data-role="flyout-welcome"></p>
+
+                                    <p></p>
+
+
+
+                                    <div class="" id="flyout-remind-list"></div>
+                                    <ul class="" data-role="quick-entry">
+
+                                        <li><a href="fav.php" rel="nofollow">Meus favoritos</a></li>
+                                        <li><a href="anuncios.php" rel="nofollow">Meus anuncios</a></li>
+                                        <li><a href="cadastro.php" rel="nofollow">Alterar meu cadastro</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="d-grid gap-2" style="width:100%">
+                            <a href="logout.php" class="btn btn-success btn-lg" type="button">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php else: ?>
+        <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="emailAddress">E-mail</label>
+                                <input type="email" class="form-control input-lg" placeholder="Informe o e-mail" id="txtLogin">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha</label>
+                                <input type="password" class="form-control input-lg" placeholder="Senha" id="txtSenha">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="forget"> Mantenha-me logado
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <p>Ainda não é cadastrado? <a href="cadastro.php">Cadastre-se Aqui.</a></p>
+                        <div class="d-grid gap-2" style="width:100%">
+                            <button id="btnLogin" class="btn btn-success btn-lg" type="button">Logar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).on("click", "#btnLogin", function() {
             $.getJSON('login.php', {
-                email: $("#txtEmail").val(),
+                email: $("#txtLogin").val(),
                 senha: $("#txtSenha").val()
             })
             .done(function (data) {
@@ -233,6 +201,41 @@
                 var err = textStatus + ", " + error;
                 console.log("Request Failed: " + err);
             });
+        });
+
+        $(document).on("click", "#btnSalvarFavorito", function() {
+            <?php if($_SESSION["UsuarioLogadoId"]): ?>
+                var $imovel = $(this).data("imovel");
+                var $estilo = $('[data-imovel=' + $imovel + ']').prop("class");
+                var $acao = "";
+
+                if($estilo == "favorito")
+                {
+                    $('[data-imovel=' + $imovel + ']').removeClass("favorito");
+                    $acao = "remover";
+                }
+                else
+                {
+                    $('[data-imovel=' + $imovel + ']').addClass("favorito");
+                    $acao = "adicionar";
+                }
+
+                $.getJSON('salvarfavorito.php', {
+                    usuario: <?php echo $_SESSION["UsuarioLogadoId"]; ?>,
+                    imovel: $imovel,
+                    acao: $acao
+                })
+                .done(function (data) {
+                    
+                })
+                .fail(function (jqxhr, textStatus, error) {
+                    var err = textStatus + ", " + error;
+                    console.log("Request Failed: " + err);
+                });
+
+            <?php else: ?>
+                alert("Você deve estar logado para poder adicionar aos favoritos!")
+            <?php endif; ?>
         });
     </script>
 </body>

@@ -68,38 +68,54 @@ function find_all( $table ) {
 	return find($table);
 }
 
-function buscarImoveis($id = null ) {
+function buscarImoveis($id = null, $limit = null, $infousuarioid = 0 ) {
   
 	$database = open_database();
 	$found = null;
 
-
-
 	try {
-		$sql = "SELECT i.id, i.nome, endereco, preco, descricao, numero, complemento, bairro, estado, cidade, vagasid, banheirosid, tipoid, quartoid, foto, tamanho, t.Nome as tipo, b.nome as banheiros, q.nome as quartos, v.nome as vagas ";
+		$usuariologado = ($_SESSION["UsuarioLogadoId"]) ? $_SESSION["UsuarioLogadoId"] : 0;
+
+		$sql = "SELECT i.id, i.nome, endereco, preco, descricao, numero, complemento, bairro, estado, cidade, vagasid, banheirosid, tipoid, quartoid, foto, tamanho, ";
+		$sql .= "t.Nome as tipo, b.nome as banheiros, q.nome as quartos, v.nome as vagas, case when iu.InfousuarioId > 0 then 1 else 0 end as favorito ";
 		$sql .= "FROM imoveis i ";
 		$sql .= "left join tipo t on i.tipoid = t.id ";
 		$sql .= "left join banheiros b on i.banheirosid = b.id ";
 		$sql .= "left join quartos q on i.quartoid = q.id ";
 		$sql .= "left join vagas v on i.vagasid = v.id ";
+		$sql .= "left join imovelusuario iu on iu.imovelId  = i.id and iu.InfousuarioId = " . $usuariologado;
 		
 		if ($id) {
 	    	$sql .= " WHERE id = " . $id;
-	    	$result = $database->query($sql);
+	    	// $result = $database->query($sql);
 	    
-			if ($result->num_rows > 0) {
-				$found = $result->fetch_assoc();
-			}
-	  	} else {
-	    	$result = $database->query($sql);
-	    
-			if ($result->num_rows > 0) {
-				$found = $result->fetch_all(MYSQLI_ASSOC);
-	    	}
+			// if ($result->num_rows > 0) {
+			// 	$found = $result->fetch_assoc();
+			// }
 	  	}
+		
+		if ($infousuarioid > 0) {
+	    	$sql .= " WHERE InfousuarioId = " . $infousuarioid;
+	    	// $result = $database->query($sql);
+	    
+			// if ($result->num_rows > 0) {
+			// 	$found = $result->fetch_assoc();
+			// }
+	  	}
+		
+		if($limit > 0)
+		{
+			$sql .= " ORDER BY RAND() LIMIT " . $limit;
+		}
+		
+		$result = $database->query($sql);
+	
+		if ($result->num_rows > 0) {
+			$found = $result->fetch_all(MYSQLI_ASSOC);
+		}
 	} catch (Exception $e) {
-	  $_SESSION['message'] = $e->GetMessage();
-	  $_SESSION['type'] = 'danger';
+		$_SESSION['message'] = $e->GetMessage();
+		$_SESSION['type'] = 'danger';
   	}
 	
 	close_database($database);
@@ -150,7 +166,7 @@ function save($table = null, $data = null) {
 		$_SESSION['type'] = 'success';
 	
 	} catch (Exception $e) { 
-		printf("Errormessage: %s\n", $mysqli->error);
+		echo "Errormessage: " . $mysqli->error;
 		$_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
 		$_SESSION['type'] = 'danger';
 	} 
@@ -209,6 +225,46 @@ function EfetuarLogin($email, $senha ) {
 
 	close_database($database);
 	return $user;
+}
+
+function salvarfavorito($usuario, $imovel) {
+
+	$database = open_database();
+	
+	$sql = "INSERT INTO imovelusuario(imovelId, InfousuarioId) VALUES " . "($imovel, $usuario);";
+
+	try {
+		$database->query($sql);
+	
+		$_SESSION['message'] = 'Registro cadastrado com sucesso.';
+		$_SESSION['type'] = 'success';
+	
+	} catch (Exception $e) { 
+		$_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+		$_SESSION['type'] = 'danger';
+	} 
+	
+	close_database($database);
+}
+
+function removerfavorito($usuario, $imovel) {
+
+	$database = open_database();
+	
+	$sql = "DELETE FROM imovelusuario WHERE imovelId = " . $imovel . " AND InfousuarioId = " .$usuario;
+
+	try {
+		$database->query($sql);
+	
+		$_SESSION['message'] = 'Registro removido com sucesso.';
+		$_SESSION['type'] = 'success';
+	
+	} catch (Exception $e) { 
+		$_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+		$_SESSION['type'] = 'danger';
+	} 
+	
+	close_database($database);
 }
 
 ?>

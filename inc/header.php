@@ -95,7 +95,7 @@
                             </li>
                         <?php else: ?>
                             <li>
-                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-signin">
+                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-signin" class="nav-link text-white">
                                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#login" /></svg>
                                     Login
                                 </a>

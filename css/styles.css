@@ -335,6 +335,7 @@ hr.vertical {
     max-width: 100%;
     width: 100%;
     height: auto;
+    max-height: 200px;
 }
 
 .property-status {
@@ -452,7 +453,8 @@ hr.vertical {
     vertical-align: top;
 }
 
-.property-footer {
+.property-footer,
+.property-footer-selected {
     position: relative;
     display: table;
     width: 100%;
@@ -474,6 +476,25 @@ hr.vertical {
 .property-footer a:focus {
     color: #ACB5BD;
     background: #212529;
+    overflow: hidden;
+    outline: none;
+}
+
+.property-footer a.favorito {
+    display: table-cell;
+    width: 50%;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    color: #ACB5BD;
+    background: #212529;
+}
+
+.property-footer a.favorito:hover,
+.property-footer a.favorito:focus {
+    background: #3E454D;
+    color: #212529;
     overflow: hidden;
     outline: none;
 }
