@@ -113,13 +113,13 @@ function buscarImoveis($id = null ) {
 			$uploaddir = ABSPATH . 'uploads/';
 			$uploadfile = $uploaddir . basename($_FILES['fotoimovel']['name']);
 
-			if (move_uploaded_file($_FILES['fotoimovel']['tmp_name'], $uploadfile)) {
-				$imovel->foto = basename($_FILES['fotoimovel']['name']);
-				echo "Deu Certo!";
-			}
-			else {
-				echo "Deu Erro!";
-			}
+			// if (move_uploaded_file($_FILES['fotoimovel']['tmp_name'], $uploadfile)) {
+				// $imovel->foto = basename($_FILES['fotoimovel']['name']);
+			//	echo "Deu Certo!";
+		//	}
+		//	else {
+			//	echo "Deu Erro!";
+		//	}
 			
 			var_dump($imovel); exit();
 			save('imoveis', $imovel);
@@ -214,5 +214,8 @@ function EfetuarLogin($email, $senha ) {
 	close_database($database);
 	return $user;
 }
+ 
+function ListarImovel(){
 
+}
 ?>

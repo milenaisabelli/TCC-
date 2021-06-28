@@ -147,6 +147,7 @@ if(!$_SESSION["UsuarioLogadoId"]): ?>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4 ou mais</option>
+                            <option value="5">0</option>
                         </select>
                         <div class="invalid-feedback">
 
@@ -158,10 +159,12 @@ if(!$_SESSION["UsuarioLogadoId"]): ?>
                         <label for="country" class="form-label">Banheiros</label>
                         <select class="form-select" id="country" placeholder="" value="" name="imovel['banheirosid']" required>
                             <option value="">Escolha...</option>
+                           
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4 ou mais</option>
+                            <option value="5">0</option>
                         </select>
                         <div class="invalid-feedback">
                         </div>
@@ -171,10 +174,11 @@ if(!$_SESSION["UsuarioLogadoId"]): ?>
                         <label for="country" class="form-label">Vagas</label>
                         <select class="form-select" id="country" placeholder="" value="" name="imovel['vagasid']" required>
                             <option value="">Escolha...</option>
-                            <option value="1">1</option>
+                           <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4 ou mais</option>
+                            <option value="5">0</option>
                         </select>
                         <div class="invalid-feedback">
 
@@ -195,11 +199,11 @@ if(!$_SESSION["UsuarioLogadoId"]): ?>
 
                     </div>
 
-                    <div class="mb-3">
+                   <!-- <div class="mb-3">
                       <label for="formFileSm" class="form-label">Foto</label>
                       <input class="form-control form-control-sm" id="formFileSm" name="'fotoimovel'" type="file">
                     </div>
-                    <hr class="my-4">
+                    <hr class="my-4"> -->
 
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="same-address">

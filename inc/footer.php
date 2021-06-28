@@ -126,7 +126,7 @@
                                 <ul class="" data-role="quick-entry">
 
                                     <li><a href="fav.php" rel="nofollow">Meus favoritos</a></li>
-                                    <li><a href="meusimoveis.php" rel="nofollow">Meus favoritos</a></li>
+                                    <li><a href="anuncios.php" rel="nofollow">Meus anuncios</a></li>
                                     <li><a href="cadastro.php" rel="nofollow">Alterar meu cadastro</a></li>
                                 </ul>
 
@@ -141,6 +141,76 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-text" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+
+                        <h4> Bem-Vindo <?php echo $_SESSION["UsuarioLogadoNome"] ?>! </h4>
+
+                        <div class="user-account-main" data-role="user-account-main">
+
+
+                            <div class="flyout-user-signIn" data-role="user-signIn">
+                                <p class="flyout-welcome-text" data-role="flyout-welcome"></p>
+
+                                <p></p>
+
+
+
+                                <div class="" id="flyout-remind-list"></div>
+                                <ul class="" data-role="quick-entry">
+
+                                    <li><a href="fav.php" rel="nofollow">Meus favoritos</a></li>
+                                    <li><a href="anuncios.php" rel="nofollow">Meus anuncios</a></li>
+                                    <li><a href="cadastro.php" rel="nofollow">Alterar meu cadastro</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2" style="width:100%">
+                        <a href="logout.php" class="btn btn-success btn-lg" type="button">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="modal fade" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-signin" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="emailAddress">Nome</label>
+                            <input type="email" class="form-control input-lg" placeholder="Informe o e-mail" id="txtEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" class="form-control input-lg" placeholder="Senha" id="txtSenha">
+                        </div>
+                        
+                    </form>
+                    <textarea rows="6" class="form-control" id="experiencia" name="imovel['descricao']"></textarea>
+                </div>
+               
+                    <div class="d-grid gap-2" style="width:100%">
+                        <button id="btnLogin" class="btn btn-success btn-lg" type="button">Enviar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>

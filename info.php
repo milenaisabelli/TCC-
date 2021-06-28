@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7 text-center mx-auto">
-                <h1 class="text-white pt-3 mt-n5">Soft UI Design System</h1>
-                <p class="lead text-white mt-3">Free & Open Source Web UI Kit built over Bootstrap 5. <br /> Join over 1.4 million developers around the world. </p>
+                <h1 class="text-white pt-3 mt-n5">Kuromi Imóveis</h1>
+                <p class="lead text-white mt-3">A maior loja online de captação de imóveis  </p>
             </div>
         </div>
     </div>
@@ -32,25 +32,25 @@
                 <div class="row">
                     <div class="col-md-4 position-relative">
                         <div class="p-3 text-center">
-                            <h1 class="text-gradient text-primary"><span id="state1" countTo="70">0</span>+</h1>
-                            <h5 class="mt-3">Coded Elements</h5>
-                            <p class="text-sm">From buttons, to inputs, navbars, alerts or cards, you are covered</p>
+                            <h1 class="text-gradient text-primary"><span id="state1" countTo="70">70</span>+</h1>
+                            <h5 class="mt-3">Casas Captadas</h5>
+                            <p class="text-sm">Mais de 70 casas captadas por nossa empresa</p>
                         </div>
                         <hr class="vertical dark">
                     </div>
                     <div class="col-md-4 position-relative">
                         <div class="p-3 text-center">
-                            <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span>+</h1>
-                            <h5 class="mt-3">Design Blocks</h5>
-                            <p class="text-sm">Mix the sections, change the colors and unleash your creativity</p>
+                            <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">30</span>+</h1>
+                            <h5 class="mt-3">Nossa equipe</h5>
+                            <p class="text-sm">A Kuromi Imóveis possui mais de 30 funcionarios atuando no nosso mercado de trabalho!</p>
                         </div>
                         <hr class="vertical dark">
                     </div>
                     <div class="col-md-4">
                         <div class="p-3 text-center">
-                            <h1 class="text-gradient text-primary" id="state3" countTo="4">0</h1>
-                            <h5 class="mt-3">Pages</h5>
-                            <p class="text-sm">Save 3-4 weeks of work when you use our pre-made pages for your website</p>
+                            <h1 class="text-gradient text-primary"><span id="state3" countTo="4">30</span> </h1>
+                            <h5 class="mt-3">Funcionarios atuando 24hrs por dia </h5>
+                            <p class="text-sm">Temos funcionarios analisando e aceitando casas para venda e aluguel 24hrs!</p>
                         </div>
                     </div>
                 </div>
@@ -80,8 +80,9 @@
                                     </g>
                                 </svg>
                             </div>
-                            <h5 class="font-weight-bolder mt-3">Full Documentation</h5>
-                            <p class="pe-5">Built by developers for developers. Check the foundation and you will find everything inside our documentation.</p>
+                            <h5 class="font-weight-bolder mt-3">Captação de Imóveis</h5>
+                            <p class="pe-5">Nós buscamos captar os melhores imóveis pelo melhor preço
+</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -101,8 +102,8 @@
                                     </g>
                                 </svg>
                             </div>
-                            <h5 class="font-weight-bolder mt-3">Bootstrap 5 Ready</h5>
-                            <p class="pe-3">The world’s most popular front-end open source toolkit, featuring Sass variables and mixins.</p>
+                            <h5 class="font-weight-bolder mt-3">Vendas</h5>
+                            <p class="pe-3">A parte de venda é feita diretamente com o vendedor fez o anuncio, sendo o mesmo vinculado com a nossa empresa.</p>
                         </div>
                     </div>
                 </div>

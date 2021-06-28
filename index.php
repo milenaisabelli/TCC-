@@ -124,8 +124,14 @@
                         </h3>
                     </div>
                     <div class="property-footer">
-                        <a href="#" title="Add to favorite"><i class="fa fa-heart"></i></a>
-                        <a href="#" title="Contact Agent"><i class="fa fa-envelope"></i></a>
+                    <a href="#" title="Add to favorite"><i class="fa fa-heart"></i></a>
+                    <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#modal-test" title="Contact Agent"><i class="fa fa-envelope"></i></a>
+
+
+                      <!--  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-text" title="Contact Agent"><i class="fa fa-envelope" title="Add to favorite"><i class="fa fa-heart"></i></a>-->
+                        
+                     
+    
                     </div>
                 </div>
             </div>
